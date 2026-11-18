@@ -21,7 +21,7 @@ total_ram_bytes = sum(
 
 print(f"Size in RAM: {total_ram_bytes / (1024**2):.2f} MB ({total_ram_bytes} bytes)")
 
-result = dataset.__get__(0)
+result = dataset[0]
 assert(type(result) == tuple)
 img, mask = result
 plt.imshow(img)

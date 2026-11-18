@@ -31,7 +31,7 @@ class CityScapesDataset:
 
         assert(len(self.imgs) == len(self.masks))
 
-    def __get__(self, idx:int) -> tuple[MatLike, MatLike] | None:
+    def __getitem__(self, idx:int) -> tuple[MatLike, MatLike] | None:
         if idx >= len(self):
             return None
         match self.setting.preload:
